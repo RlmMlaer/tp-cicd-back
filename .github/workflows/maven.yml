@@ -44,3 +44,6 @@ jobs:
 
     - name: Vérification de l'image créée
       run: docker images
+
+    - name: Push de l'image sur Docker Hub
+      run: docker push ${{ env.imagename }}
