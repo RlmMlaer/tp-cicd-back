@@ -9,7 +9,7 @@
 name: Java CI with Maven
 
 env:
-  imagename: realmmlr/cicd-back:github.ref_name
+  imagename: realmmlr/cicd-back:${{ github.ref_name }}
 
 on:
   push:
