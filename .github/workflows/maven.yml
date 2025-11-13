@@ -47,3 +47,9 @@ jobs:
 
     - name: Push de l'image sur Docker Hub
       run: docker push ${{ env.imagename }}
+
+    - name: Deploy to Render
+      uses: gh-actions-workflows/deploy-docker-render@v1.1
+      with:
+        deploy-hook: ${{ secrets.RENDER_DEPLOY_HOOK }}
+        image-url: realmmlr/cicd-back:master
